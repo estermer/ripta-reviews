@@ -1,5 +1,5 @@
 ![RIPTAlogo](/img/ripta_logo.png)
-# locator
+# reviews
 
 HACK RI - Team Black Berry
 
