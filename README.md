@@ -1,4 +1,4 @@
-![RIPTAlogo](/img/ripta-logo.png)
+![RIPTAlogo](/img/ripta_logo.png)
 
 # RIPTAlocator
 
