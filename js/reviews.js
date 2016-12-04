@@ -7,13 +7,26 @@
     $scope.goToReviewsList = function(){
       $scope.readReviews = true;
 
-      $http.get('/reviews')
+      $http.get('https://pure-journey-38273.herokuapp.com/results.json')
         .then(function(res){
-          $scope.reviewsList = res.data.reviews;
+          $scope.comments = res.data["Add Any Additional Comments"];
+          $scope.cleanAvg = averageStars(res.data["Cleanliness"]);
+          $scope.friendAvg = averageStars(res.data["Friendliness"]);
+          $scope.expAvg = averageStars(res.data["Overall Experience"]);
+          $scope.timeAvg = averageStars(res.data["Timeliness"]);
+          $scope.safeAvg = averageStars(res.data["Safety"]);
         })
         .catch(function(err){
           console.log(err);
         });
+    };
+
+    function averageStars(resultsArr){
+      var count = 0;
+      for(var i = 0; i < resultsArr.length; i++){
+        count += Number(resultsArr[i]);
+      }
+      return count/resultsArr.length;
     };
 
   });

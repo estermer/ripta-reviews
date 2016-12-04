@@ -29,19 +29,16 @@
     <div  ng-if="!readReviews" id="map"></div>
 
     <div ng-if="readReviews" class="review-list">
-      <img src="img/5stars.png" alt="5 stars" />
-      <img src="img/4stars.png" alt="4 stars" />
-      <img src="img/3stars.png" alt="3 stars" />
-      <img src="img/2stars.png" alt="2 stars" />
-      <img src="img/1stars.png" alt="1 stars" />
+      <img class="stars" src="img/5stars.png" alt="5 stars" />{{expAvg}}/5 - Overall Experience<br>
+      <img class="stars" src="img/5stars.png" alt="4 stars" />{{timeAvg}}/5 - Timeliness<br>
+      <img class="stars" src="img/5stars.png" alt="3 stars" />{{cleanAvg}}/5 - Cleanliness<br>
+      <img class="stars" src="img/5stars.png" alt="2 stars" />{{friendAvg}}/5 - Friendliness<br>
+      <img class="stars" src="img/5stars.png" alt="1 stars" />{{safeAvg}}/5 - Safety<br>
 
-      <!-- number of 5 stars to number of 1 stars -->
-      <div ng-repeat="review in reviewsList" class="review">
-        <h3>{{review.title}}</h3>
+      <div ng-repeat="comment in comments" class="review">
         <p>
-          {{review.description}}
+          <i>{{comment}}</i>
         </p>
-        <span><i>- {{review.author.firstname}}</i></span>
       </div>
     </div>
   </body>

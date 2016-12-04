@@ -4,6 +4,7 @@
 
 body {
   background-color: #052A44;
+  color: white;
 }
 
 #map {
@@ -14,15 +15,18 @@ body {
 }
 
 #initial-buttons {
+  float:right;
   display: flex;
   flex-direction: column;
 }
 
+.stars {
+  height: 30px;
+}
+
 button {
   background-color: white;
-  float: right;
-  width: auto;
-  height: auto;
+  width: 170px;
   cursor: pointer;
   border: 1;
   padding: 10px 25px;
