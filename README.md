@@ -42,5 +42,7 @@ Additional features that can be added to this application:
 
 - make this application go mobile and be apart of a Transit like RIPTA app that provides bus location services in real time, knows when a user has left it's ride and asks instantly for user feedback.
 
+- figure out a way to determine if a user just got off the bus and send them an immediate e-mail or notification to ask for a review about their experience to encourage reviews
+
 
 
