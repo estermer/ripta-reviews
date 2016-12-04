@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RIPTA Locator</title>
+    <title>RIPTASTIC </title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title">
 
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/zurb/foundation-apps-1.1.0.min.css" title="" type="" />
     <!-- JavaScript -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaZ--KZ-uQB0qKgs2W9CVfobezdchkq6k"
     async defer></script>
@@ -20,13 +21,45 @@
   <body ng-controller="ReviewsCtrl as reviews">
 
     <div ng-if="!readReviews" id="initial-buttons">
-      <a href="https://goo.gl/forms/2HrMjmdlJACLJ6t82"><button id="write-review" name="button">Write a review</button></a>
+      <a href="goo.gl/1KwyaV"><button id="write-review" name="button">Write a review</button></a>
       <button id="read-review" ng-click="goToReviewsList()">Read Reviews</button>
     </div>
 
     <img ng-click="doTheBack()" id="logo" src="img/Ripta Logo.jpg" alt="RIPTA">
 
-    <div  ng-if="!readReviews" id="map"></div>
+    <div ng-if="!readReviews">
+      
+      <div id="map"></div>
+
+
+      <section class="block-list" style="float:left; position: relative; left: 50px;">
+
+      <header style="font-size:20px; color:white;">STOPS NEAR ME</header>
+      <ul>
+       <li><a href="#">Route 52</a></li>
+      <li><a href="#">Chevron Station </a></li>
+      <li><a href="#">Blank Space Station</a></li>
+      <li><a href="#">Station 3</a></li>
+      </ul>
+      </section>
+      </div>	
+      <div class="grid-content small-2 medium-3" style="float:right; position: relative; right:50px;">
+      <section ng-if="!readReviews" class="block-list">
+
+        <div style="text-align: right;">
+
+          <header style="font-size: 20px; color:white;">Hold?</header>
+          <ul>
+
+            <li><a href="#" style="color: #ecf0f1; background-color: #e74c3c;" >WAIT!</a></li>
+            <li><a href="#" style="color: #ecf0f1; background-color: #c0392b;">HOLD!</a></li>
+            <li><a href="#" style="color: #ecf0f1; background-color: #e74c3c;">WAIT!</a></li>
+          </ul>
+
+        </div>
+      </section>
+
+    </div>
 
     <div ng-if="readReviews" class="review-list">
       <img class="stars" src="img/5stars.png" alt="5 stars" />{{expAvg}}/5 - Overall Experience<br>
