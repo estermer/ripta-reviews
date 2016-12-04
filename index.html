@@ -37,32 +37,22 @@
       <div id="map"></div>
 
 
-      <section class="block-list" style="float:left; position: relative; left: 50px;">
+      <section class="buttons block-list" style="margin: 20px 50px 0px 20px;">
 
       <header style="font-size:20px; color:white;">STOPS NEAR ME</header>
       <ul>
-      <li><a href="#">Chevron Station: Bus 50 - 03:05 PM </a></li>
-      <li><a href="#">Blank Space Station: Bus 50 - 03:06 PM</a></li>
-      <li><a href="#">Station 3: Bus 50 - 03:07 PM</a></li>
+      <li><a href="#">Chevron Station: Bus 50 - 03:05 PM </a> 
+            <span><a href="#" style="color: #ecf0f1; background-color: #e74c3c;" class="alert-btn" >WAIT!</a></span>
+      </li>
+      <li><a href="#">Blank Space Station: Bus 50 - 03:06 PM</a>
+            <span><a href="#" style="color: #ecf0f1; background-color: #e74c3c;" class="alert-btn" >WAIT!</a></span>
+      </li>
+      <li><a href="#">Station 3: Bus 50 - 03:07 PM</a>
+            <span><a href="#" style="color: #ecf0f1; background-color: #e74c3c;" class="alert-btn" >WAIT!</a></span>
+      </li>
       </ul>
       </section>
       </div>	
-      <div class="grid-content small-2 medium-3" style="float:right; position: relative; right:50px;">
-      <section ng-if="!readReviews" class="block-list">
-
-        <div style="text-align: right;">
-
-          <header style="font-size: 20px; color:white;">Hold?</header>
-          <ul>
-
-            <li><a href="#" style="color: #ecf0f1; background-color: #e74c3c;" class="alert-btn" >WAIT!</a></li>
-            <li><a href="#" style="color: #ecf0f1; background-color: #c0392b;" class="alert-btn">HOLD!</a></li>
-          </ul>
-
-        </div>
-      </section>
-
-    </div>
 
     <div ng-if="readReviews" class="review-list">
       <img class="stars" src="img/5stars.png" alt="5 stars" />{{expAvg}}/5 - Overall Experience<br>
