@@ -25,7 +25,12 @@
       <button id="read-review" ng-click="goToReviewsList()">Read Reviews</button>
     </div>
 
-    <img ng-click="doTheBack()" id="logo" src="img/Ripta Logo.jpg" alt="RIPTA">
+    <div ng-if="readReviews">
+      <img ng-click="doTheBack()" id="logo" src="img/Ripta Reviews.jpg" alt="RIPTA">
+    </div>
+    <div ng-if="!readReviews">
+      <img ng-click="doTheBack()" id="logo" src="img/Ripta Locator.jpg" alt="RIPTA">
+    </div>
 
     <div ng-if="!readReviews">
       
