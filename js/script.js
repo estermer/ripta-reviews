@@ -33,4 +33,11 @@ function loadMap(){
   } else {
     success(window.pos);
   }
+
+  var btns = document.getElementsByClassName("alert-btn");
+  for(var i=0; i< btns.length; i++){
+    btns[i].addEventListener("click", function(){
+      alert("HEY DRIVER!! HOLD UP!!"); 
+    })
+  }
 }
