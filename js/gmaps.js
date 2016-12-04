@@ -1,4 +1,3 @@
-//GMAPS APIKEY = AIzaSyCaZ--KZ-uQB0qKgs2W9CVfobezdchkq6k//
 
 ///Creating a map from google maps///
 function initMap(lat, lng) {//pass a long and lat as parameters
