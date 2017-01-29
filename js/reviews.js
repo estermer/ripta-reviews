@@ -29,5 +29,16 @@
       return count/resultsArr.length;
     };
 
+    $scope.doTheBack = function() {
+      console.log("going back");
+      if(!$scope.readReviews){
+      
+      } else {
+        $scope.readReviews = !$scope.readReviews;
+        setTimeout(function(){
+          loadMap();
+        },100)
+      }
+    };
   });
 })();

@@ -3,8 +3,14 @@
 /***********************/
 
 body {
-  background-color: #052A44;
-  color: white;
+  background-color: #052A44 !important;
+  color: white !important;
+}
+body button {
+  color: #222;
+}
+body h2 {
+  color: white
 }
 
 #map {
@@ -32,7 +38,13 @@ button {
   padding: 10px 25px;
   font-size: 16px;
 }
+.buttons a:hover{
+  color: #222 !important;
+}
 
 #logo {
   width: 200px;
+}
+.block-list li>a, .block-list li>label, .block-list li>span {
+  color: #fff !important;
 }
